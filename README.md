@@ -1,9 +1,9 @@
 ## iKNOW
-[!OpenBSD](https://img.shields.io/badge/OpenBSD-none-blue.svg)
+
 
 ## Conteúdo
 
-- [Introducao](#introducao)
+- [Introducao](#Introdução)
 - [Arquitectura](#arquitectura)
 - [Começo rápido](#)
 - [Guia do administrador](#Guia do administrador)
@@ -17,7 +17,7 @@
 - [Requisitos](#requisitos)
 - [Licença](#licenca)
 
-## Introduction
+## Introdução
 
 **iKNOW** é um sistema de detecção de expressões e 
 
