@@ -8,26 +8,6 @@ Pretende-se:
 	- ha sh a todos esses ficheiros
 	- detectar alterações
 	
-    <div class="repository-topics-container mt-2 mb-3 js-topics-list-container">  <div class="list-topics-container f6">
-      <a href="/topics/security" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:security">
-        security
-      </a>
-      <a href="/topics/malware" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:malware">
-        malware
-      </a>
-      <a href="/topics/intrusion-detection" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:intrusion-detection">
-        intrusion-detection
-      </a>
-      <a href="/topics/sensor" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:sensor">
-        sensor
-      </a>
-      <a href="/topics/heuristics" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:heuristics">
-        heuristics
-      </a>
-      <a href="/topics/python" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:python">
-        python
-      </a>
-      <a href="/topics/network-monitoring" class="topic-tag topic-tag-link" data-ga-click="Topic, repository page" data-octo-click="topic_click" data-octo-dimensions="topic:network-monitoring">
-        network-monitoring
-      </a>
-  </div>
+<img src="https://camo.githubusercontent.com/72899da19fbd391d48b4c14804344662b0ed56de/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d322e36253743322e372d79656c6c6f772e737667" alt="Python 2.6|2.7" data-canonical-src="https://img.shields.io/badge/python-2.6%7C2.7-yellow.svg" style="max-width:100%;">
+
+
