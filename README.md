@@ -5,7 +5,7 @@
 
 - [Introdução](#Introdução)
 - [Arquitectura](#arquitectura)
-- [Começo rápido](#)
+- [Inicio rápido](#Inicio-rápido)
 - [Guia do administrador](#Guia-do-administrador)
  - [Sensor](#sensor)
  - [Servidor](#servidor)
@@ -46,17 +46,17 @@ zemot, zeroaccess, zeus, zherotee, zlader, zlob, zombrari, zxshell,
 zyklon, etc.
 ```
 
-## Architecture
+## Arquitectura
 
 Maltrail is based on the **Traffic** -&gt; **Sensor** &lt;-&gt; **Server** &lt;-&gt; **Client** architecture. **Sensor**(s) is a standalone component running on the monitoring node (e.g. Linux platform connected passively to the SPAN/mirroring port or transparently inline on a Linux bridge) or at the standalone machine (e.g. Honeypot) where it "monitors" the passing **Traffic** for blacklisted items/trails (i.e. domain names, URLs and/or IPs). In case of a positive match, it sends the event details to the (central) **Server** where they are being stored inside the appropriate logging directory (i.e. `LOG_DIR` described in the *Configuration* section). If **Sensor** is being run on the same machine as **Server** (default configuration), logs are stored directly into the local logging directory. Otherwise, they are being sent via UDP messages to the remote server (i.e. `LOG_SERVER` described in the *Configuration* section).
 
-![Architecture diagram](https://i.imgur.com/2IP9Mh2.png)
+![Arquitectura - diagrama](https://i.imgur.com/2IP9Mh2.png)
 
 **Server**'s primary role is to store the event details and provide back-end support for the reporting web application. In default configuration, server and sensor will run on the same machine. So, to prevent potential disruptions in sensor activities, the front-end reporting part is based on the ["Fat client"](https://en.wikipedia.org/wiki/Fat_client) architecture (i.e. all data post-processing is being done inside the client's web browser instance). Events (i.e. log entries) for the chosen (24h) period are transferred to the **Client**, where the reporting web application is solely responsible for the presentation part. Data is sent toward the client in compressed chunks, where they are processed sequentially. The final report is created in a highly condensed form, practically allowing presentation of virtually unlimited number of events.
 
 Note: **Server** component can be skipped altogether, and just use the standalone **Sensor**. In such case, all events would be stored in the local logging directory, while the log entries could be examined either manually or by some CSV reading application.
 
-## iniciorapido
+## Inicio rápido
 
 The following set of commands should get your Maltrail **Sensor** up and running (out of the box with default settings and monitoring interface "any"):
 
@@ -77,7 +77,7 @@ cd maltrail
 python server.py
 ```
 
-![Server](https://i.imgur.com/loGW6GA.png)
+![Servidor](https://i.imgur.com/loGW6GA.png)
 
 To test that everything is up and running execute the following:
 
@@ -105,7 +105,7 @@ Access the reporting interface (i.e. **Client**) by visiting the http://127.0.0.
 
 Sensor's configuration can be found inside the `maltrail.conf` file's section `[Sensor]`:
 
-![Sensor's configuration](https://i.imgur.com/8yZKH14.png)
+![Configuração do Sensor](https://i.imgur.com/8yZKH14.png)
 
 If option `USE_MULTIPROCESSING` is set to `true` then all CPU cores will be used. One core will be used only for packet capture (with appropriate affinity, IO priority and nice level settings), while other cores will be used for packet processing. Otherwise, everything will be run on a single core. Option `USE_FEED_UPDATES` can be used to turn off the trail updates from feeds altogether (and just use the provided static ones). Option `UPDATE_PERIOD` contains the number of seconds between each automatic trails update (Note: default value is set to `86400` (i.e. one day)) by using definitions inside the `trails` directory (Note: both **Sensor** and **Server** take care of the trails update). Option `CUSTOM_TRAILS_DIR` can be used by user to provide location of directory containing the custom trails (`*.txt`) files.
 Option `USE_HEURISTICS` turns on heuristic mechanisms (e.g. `long domain name (suspicious)`, `excessive no such domain name (suspicious)`, `direct .exe download (suspicious)`, etc.), potentially introducing false positives. Option `CAPTURE_BUFFER` presents a total memory (in bytes of percentage of total physical memory) to be used in case of multiprocessing mode for storing packet capture in a ring buffer for further processing by non-capturing processes. Option `MONITOR_INTERFACE` should contain the name of the capturing interface. Use value `any` to capture from all interfaces (if OS supports this). Option `CAPTURE_FILTER` should contain the network capture (`tcpdump`) filter to skip the uninteresting packets and ease the capturing process. Option `SENSOR_NAME` contains the name that should be appearing inside the events `sensor_name` value, so the event from one sensor could be distinguished from the other. If option `LOG_SERVER` is set, then all events are being sent remotely to the **Server**, otherwise they are stored directly into the logging directory set with option `LOG_DIR`, which can be found inside the `maltrail.conf` file's section `[All]`. In case that the option `UPDATE_SERVER` is set, then all the trails are being pulled from the given location, otherwise they are being updated from trails definitions located inside the installation itself.
@@ -118,27 +118,27 @@ Detected events are stored inside the **Server**'s logging directory (i.e. optio
 
 ![Sample log](https://i.imgur.com/RycgVru.png)
 
-### Server
+### Servidor
 
 Server's configuration can be found inside the `maltrail.conf` section `[Server]`:
 
-![Server's configuration](https://i.imgur.com/TiUpLX8.png)
+![Configuração do servidor](https://i.imgur.com/TiUpLX8.png)
 
 Option `HTTP_ADDRESS` contains the web server's listening address (Note: use `0.0.0.0` to listen on all interfaces). Option `HTTP_PORT` contains the web server's listening port. Default listening port is set to `8338`. If option `USE_SSL` is set to `true` then `SSL/TLS` will be used for accessing the web server (e.g. `https://192.168.6.10:8338/`). In that case, option `SSL_PEM` should be pointing to the server's private/cert PEM file. 
 
 Subsection `USERS` contains user's configuration settings. Each user entry consists of the `username:sha256(password):UID:filter_netmask(s)`. Value `UID` represents the unique user identifier, where it is recommended to use values lower than 1000 for administrative accounts, while higher value for non-administrative accounts. The part `filter_netmask(s)` represents the comma-delimited hard filter(s) that can be used to filter the shown events depending on the user account(s). Default entry is as follows:
 
-![Configuration users](https://i.imgur.com/PYwsZkn.png)
+![Configuração de utilizadores](https://i.imgur.com/PYwsZkn.png)
 
 Option `UDP_ADDRESS` contains the server's log collecting listening address (Note: use `0.0.0.0` to listen on all interfaces), while option `UDP_PORT` contains listening port value. If turned on, when used in combination with option `LOG_SERVER`, it can be used for distinct (multiple) **Sensor** <-> **Server** architecture.
 
 Same as for **Sensor**, when running the **Server** (e.g. `python server.py`) for the first time and/or after a longer period of non-running, if option `USE_SERVER_UPDATE_TRAILS` is set to `true`, it will automatically update the trails from trail definitions (Note: stored inside the `trails` directory). Its basic function is to store the log entries inside the logging directory (i.e. option `LOG_DIR` inside the `maltrail.conf` file's section `[All]`) and provide the web reporting interface for presenting those same entries to the end-user (Note: there is no need install the 3rd party web server packages like Apache):
 
-![Server run](https://i.imgur.com/GHdGPw7.png)
+![Correr o servidor](https://i.imgur.com/GHdGPw7.png)
 
-## User's guide
+## Guia do utilizador
 
-### Reporting interface
+### Interface
 
 When entering the **Server**'s reporting interface (i.e. via the address defined by options `HTTP_ADDRESS` and `HTTP_PORT`), user will be presented with the following authentication dialog. User has to enter the proper credentials that have been set by the server's administrator inside the configuration file `maltrail.conf` (Note: default credentials are `admin:changeme!`):
 
@@ -158,7 +158,7 @@ Once clicking the date, all events for that particular date should be loaded and
 
 Middle part holds a summary of displayed events. `Events` box represents total number of events in a selected 24-hour period, where red line represents IP-based events, blue line represents DNS-based events and yellow line represents URL-based events. `Sources` box represents number of events per top sources in form of a stacked column chart, with total number of sources on top. `Threats` box represents percentage of top threats in form of a pie chart (Note: gray area holds all threats having each &lt;1% in total events), with total number of threats on top. `Trails` box represents percentage of top trails in form of a pie chart (Note: gray area holds all trails having each &lt;1% in total events), with total number of trails on top. Each of those boxes are active, hence the click on one of those will result with a more detailed graph.
 
-![Summary](https://i.imgur.com/5NFbqCb.png)
+![Resumo](https://i.imgur.com/5NFbqCb.png)
 
 Bottom part holds a condensed representation of logged events in form of a paginated table. Each entry holds details for a single threat (Note: uniquely identified by a pair `(src_ip, trail)` or `(dst_ip, trail)` if the `src_ip` is the same as the `trail` as in case of attacks coming from the outside):
 
