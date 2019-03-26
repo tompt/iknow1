@@ -5,8 +5,8 @@
 
 - [Introducao](#introducao)
 - [Arquitectura](#arquitectura)
-- [Começo rápido](#iniciorapido)
-- [Guia do administrador](#guiadoadministrador)
+- [Começo rápido](#)
+- [Guia do administrador](#Guia do administrador)
  - [Sensor](#sensor)
  - [Servidor](#servidor)
 - [Guia do utilizador](#guiadoutilizador)
