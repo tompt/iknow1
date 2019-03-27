@@ -16,7 +16,7 @@
 
 - [Requisitos](#Requisitos)
 - [Licença](#Licença)
-
+- [Agradecimentos](#Agradecimentos)
 ## Introdução
 
 **iKNOW** é um sistema de detecção de expressões e 
