@@ -9,9 +9,9 @@
 - [Guia do administrador](#Guia-do-Administrador)
  - [Sensor](#Sensor)
  - [Servidor](#Servidor)
-- [Guia do utilizador](#Guia do utilizador)
+- [Guia do utilizador](#Guia-do-utilizador)
  - [Interface](#Interface)
-- [Casos de uso real](#Casos de uso real)
+- [Casos de uso real](#Casos-de-uso-real)
  ## mais casos a ver
 
 - [Requisitos](#Requisitos)
