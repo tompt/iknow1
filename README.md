@@ -6,12 +6,12 @@
 - [Introdução](#Introdução)
 - [Arquitectura](#Arquitectura)
 - [Inicio rápido](#Inicio-rápido)
-- [Guia do administrador](#Guia-do-Administrador)
- - [Sensor](#sensor)
- - [Servidor](#servidor)
-- [Guia do utilizador](#Guia-do-utilizador)
+- [Guia do administrador](#Guia do Administrador)
+ - [Sensor](#Sensor)
+ - [Servidor](#Servidor)
+- [Guia do utilizador](#Guia do utilizador)
  - [Interface](#Interface)
-- [Casos de uso real](#Casos-de-uso-real)
+- [Casos de uso real](#Casos de uso real)
  ## mais casos a ver
 
 - [Requisitos](#Requisitos)
@@ -99,7 +99,7 @@ Access the reporting interface (i.e. **Client**) by visiting the http://127.0.0.
 
 ![Reporting interface](https://i.imgur.com/VAsq8cs.png)
 
-## Administrator's guide
+## Guia do Administrador
 
 ### Sensor
 
