@@ -4,18 +4,18 @@
 ## Conteúdo
 
 - [Introdução](#Introdução)
-- [Arquitectura](#arquitectura)
+- [Arquitectura](#Arquitectura)
 - [Inicio rápido](#Inicio-rápido)
 - [Guia do administrador](#Guia-do-administrador)
  - [Sensor](#sensor)
  - [Servidor](#servidor)
-- [Guia do utilizador](#guiadoutilizador)
- - [Interface](#interface)
-- [Casos de uso real](#casosdeusoreal)
+- [Guia do utilizador](#Guia-do-utilizador)
+ - [Interface](#Interface)
+- [Casos de uso real](#Casos-de-uso-real)
  ## mais casos a ver
 
-- [Requisitos](#requisitos)
-- [Licença](#licenca)
+- [Requisitos](#Requisitos)
+- [Licença](#Licença)
 
 ## Introdução
 
