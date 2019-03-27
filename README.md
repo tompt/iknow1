@@ -186,7 +186,7 @@ For each threat there is a column `tag` that can be filled with arbitrary "tags"
 
 ![Tags](https://i.imgur.com/u5Z4752.png)
 
-### Real-life cases
+### Casos de uso real
 
 In the following section some of the "usual suspects" scenarios will be described through the real-life cases.
 
