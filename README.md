@@ -6,7 +6,7 @@
 - [Introdução](#Introdução)
 - [Arquitectura](#Arquitectura)
 - [Inicio rápido](#Inicio-rápido)
-- [Guia do administrador](#Guia-do-administrador)
+- [Guia do administrador](#Guia-do-Administrador)
  - [Sensor](#sensor)
  - [Servidor](#servidor)
 - [Guia do utilizador](#Guia-do-utilizador)
