@@ -19,6 +19,34 @@
 - [Agradecimentos](#Agradecimentos)
 ## Introdução
 
+
+## Content
+
+- [Introduction](#introduction)
+- [Architecture](#architecture)
+- [Quick start](#quick-start)
+- [Administrator's guide](#administrators-guide)
+ - [Sensor](#sensor)
+ - [Server](#server)
+- [User's guide](#users-guide)
+ - [Reporting interface](#reporting-interface)
+- [Real-life cases](#real-life-cases)
+ - [Mass scans](#mass-scans)
+ - [Anonymous attackers](#anonymous-attackers)
+ - [Service attackers](#service-attackers)
+ - [Malware](#malware)
+ - [Suspicious domain lookups](#suspicious-domain-lookups)
+ - [Suspicious ipinfo requests](#suspicious-ipinfo-requests)
+ - [Suspicious direct file downloads](#suspicious-direct-file-downloads)
+ - [Suspicious HTTP requests](#suspicious-http-requests)
+ - [Port scanning](#port-scanning)
+ - [DNS resource exhaustion](#dns-resource-exhaustion)
+ - [Data leakage](#data-leakage)
+ - [False positives](#false-positives)
+- [Requirements](#requirements)
+- [Best practice(s)](#best-practices)
+- [License](#license)
+- [Thank you](#thank-you)
 **iKNOW** é um sistema de detecção de expressões e 
 
 is a malicious traffic detection system, utilizing publicly available (black)lists containing malicious and/or generally suspicious trails, along with static trails compiled from various AV reports and custom user defined lists, where trail can be anything from domain name (e.g. `zvpprsensinaix.com` for [Banjori](http://www.johannesbader.ch/2015/02/the-dga-of-banjori/) malware), URL (e.g. `hXXp://109.162.38.120/harsh02.exe` for known malicious [executable](https://www.virustotal.com/en/file/61f56f71b0b04b36d3ef0c14bbbc0df431290d93592d5dd6e3fffcc583ec1e12/analysis/)), IP address (e.g. `185.130.5.231` for known attacker) or HTTP User-Agent header value (e.g. `sqlmap` for automatic SQL injection and database takeover tool). Also, it uses (optional) advanced heuristic mechanisms that can help in discovery of unknown threats (e.g. new malware).
