@@ -2,26 +2,6 @@
 
 
 ## Conteúdo
-
-- [Introdução](#Introdução)
-- [Arquitectura](#Arquitectura)
-- [Inicio rápido](#Inicio-rápido)
-- [Guia do administrador](#Guia-do-Administrador)
- - [Sensor](#Sensor)
- - [Servidor](#Servidor)
-- [Guia do utilizador](#Guia-do-utilizador)
- - [Interface](#Interface)
-- [Casos de uso real](#Casos-de-uso-real)
-- mais casos a ver
-
-- [Requisitos](#Requisitos)
-- [Licença](#Licença)
-- [Agradecimentos](#Agradecimentos)
-## Introdução
-
-
-## Content
-
 - [Introduction](#introduction)
 - [Architecture](#architecture)
 - [Quick start](#quick-start)
@@ -47,6 +27,27 @@
 - [Best practice(s)](#best-practices)
 - [License](#license)
 - [Thank you](#thank-you)
+
+- [Introdução](#Introdução)
+- [Arquitectura](#Arquitectura)
+- [Inicio rápido](#Inicio-rápido)
+- [Guia do administrador](#Guia-do-Administrador)
+ - [Sensor](#Sensor)
+ - [Servidor](#Servidor)
+- [Guia do utilizador](#Guia-do-utilizador)
+ - [Interface](#Interface)
+- [Casos de uso real](#Casos-de-uso-real)
+- mais casos a ver
+
+- [Requisitos](#Requisitos)
+- [Licença](#Licença)
+- [Agradecimentos](#Agradecimentos)
+## Introdução
+
+
+## Content
+
+
 **iKNOW** é um sistema de detecção de expressões e 
 
 is a malicious traffic detection system, utilizing publicly available (black)lists containing malicious and/or generally suspicious trails, along with static trails compiled from various AV reports and custom user defined lists, where trail can be anything from domain name (e.g. `zvpprsensinaix.com` for [Banjori](http://www.johannesbader.ch/2015/02/the-dga-of-banjori/) malware), URL (e.g. `hXXp://109.162.38.120/harsh02.exe` for known malicious [executable](https://www.virustotal.com/en/file/61f56f71b0b04b36d3ef0c14bbbc0df431290d93592d5dd6e3fffcc583ec1e12/analysis/)), IP address (e.g. `185.130.5.231` for known attacker) or HTTP User-Agent header value (e.g. `sqlmap` for automatic SQL injection and database takeover tool). Also, it uses (optional) advanced heuristic mechanisms that can help in discovery of unknown threats (e.g. new malware).
