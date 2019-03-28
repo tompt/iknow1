@@ -1,33 +1,6 @@
 ## iKNOW
 
-
 ## Conteúdo
-- [Introduction](#introduction)
-- [Architecture](#architecture)
-- [Quick start](#quick-start)
-- [Administrator's guide](#administrators-guide)
- - [Sensor](#sensor)
- - [Server](#server)
-- [User's guide](#users-guide)
- - [Reporting interface](#reporting-interface)
-- [Real-life cases](#real-life-cases)
- - [Mass scans](#mass-scans)
- - [Anonymous attackers](#anonymous-attackers)
- - [Service attackers](#service-attackers)
- - [Malware](#malware)
- - [Suspicious domain lookups](#suspicious-domain-lookups)
- - [Suspicious ipinfo requests](#suspicious-ipinfo-requests)
- - [Suspicious direct file downloads](#suspicious-direct-file-downloads)
- - [Suspicious HTTP requests](#suspicious-http-requests)
- - [Port scanning](#port-scanning)
- - [DNS resource exhaustion](#dns-resource-exhaustion)
- - [Data leakage](#data-leakage)
- - [False positives](#false-positives)
-- [Requirements](#requirements)
-- [Best practice(s)](#best-practices)
-- [License](#license)
-- [Thank you](#thank-you)
-
 - [Introdução](#Introdução)
 - [Arquitectura](#Arquitectura)
 - [Inicio rápido](#Inicio-rápido)
@@ -37,16 +10,11 @@
 - [Guia do utilizador](#Guia-do-utilizador)
  - [Interface](#Interface)
 - [Casos de uso real](#Casos-de-uso-real)
-- mais casos a ver
-
 - [Requisitos](#Requisitos)
 - [Licença](#Licença)
 - [Agradecimentos](#Agradecimentos)
+
 ## Introdução
-
-
-## Content
-
 
 **iKNOW** é um sistema de detecção de expressões e 
 
