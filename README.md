@@ -4,7 +4,7 @@
 - [Introdução](#Introdução)
 - [Arquitectura](#Arquitectura)
 - [Inicio rápido](#Inicio-rápido)
-- [Guia do administrador/servidor](#Guia-do-Administrador/Servidor)
+- [Guia do administrador/servidor](#Guia-do-Administrador)
  - [Sensor](#Sensor)
  - [Servidor](#Servidor)
 - [Guia do utilizador](#Guia-do-utilizador)
@@ -94,7 +94,7 @@ Access the reporting interface (i.e. **Client**) by visiting the http://127.0.0.
 
 ![Reporting interface](https://i.imgur.com/VAsq8cs.png)
 
-## Guia do Administrador/Servidor
+## Guia do Administrador
 
 ### Sensor
 
