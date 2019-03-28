@@ -12,7 +12,7 @@
 - [Guia do utilizador](#Guia-do-utilizador)
  - [Interface](#Interface)
 - [Casos de uso real](#Casos-de-uso-real)
- ## mais casos a ver
+- mais casos a ver
 
 - [Requisitos](#Requisitos)
 - [Licença](#Licença)
