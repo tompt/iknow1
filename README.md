@@ -109,26 +109,28 @@ cat > /etc/nginx/sites-enabled/default << "EOF"
 server {
         listen 80;
         listen [::]:80;
-        root /var/www/html;
+        #root /var/www/html;
 
-        error_log /var/www/error.log error;
-        access_log /var/www/access.log;
-        index index.php index.htm index.html;
+        #error_log /var/www/error.log error;
+        #access_log /var/www/access.log;
+        #index index.php index.htm index.html;
 
         server_name example.com www.example.com;
 
-        location ~ \.php$ {
-                include snippets/fastcgi-php.conf;
-                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
-        }
+        #location ~ \.php$ {
+        #        include snippets/fastcgi-php.conf;
+        #        fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        #}
 
         #optimize static file serving
-        location ~* \.(jpg|jpeg|gif|png|css|js|ico|xml)$ {
-        access_log off;
-        log_not_found off;
-        expires 30d;
-        }
+        #location ~* \.(jpg|jpeg|gif|png|css|js|ico|xml)$ {
+        #access_log off;
+        #log_not_found off;
+        #expires 30d;
+        #}
+        return 301 https://$host$request_uri;
 }
+
 
 server {
  listen 443 ssl http2 default_server;
