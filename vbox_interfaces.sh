@@ -18,4 +18,4 @@ echo "4 adaptadaores de rede: 1-NAT, 2-Bridge Intel ethernet I217-LM, 3-host-onl
 echo "ferramentas";
 echo "eth1 automatico (169.254.113.131/16), eth2 manual (192.168.3.1/24),eth3 manual(10.0.32.50/24)";
 
-#wget https://githubusercon.com/tompt/iknow1/edit/master/vbox_interfaces.sh && sh ./vbox_interfaces.sh
+#wget hhttps://raw.githubusercontent.com/tompt/iknow1/master/vbox_interfaces.sh && sh ./vbox_interfaces.sh
