@@ -12,3 +12,10 @@ dhclient enp0s$x;
 done
 
 ifconfig | grep 192.168.3
+
+echo "configuracao inicial:";
+echo "4 adaptadaores de rede: 1-NAT, 2-Bridge Intel ethernet I217-LM, 3-host-only vbox_ether_adp3, 4-host-only vbox_ether_adp2";
+echo "ferramentas";
+echo "eth1 automatico (169.254.113.131/16), eth2 manual (192.168.3.1/24),eth3 manual(10.0.32.50/24)";
+
+#wget https://githubusercon.com/tompt/iknow1/edit/master/vbox_interfaces.sh && sh ./vbox_interfaces.sh
