@@ -11,7 +11,7 @@ dhclient -r enp0s$x;
 dhclient enp0s$x;
 done
 
-ifconfig | grep 192.168.3
+ifconfig | grep inet
 
 echo "configuracao inicial:";
 echo "4 adaptadaores de rede: 1-NAT, 2-Bridge Intel ethernet I217-LM, 3-host-only vbox_ether_adp3, 4-host-only vbox_ether_adp2";
