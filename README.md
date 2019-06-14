@@ -1,6 +1,7 @@
 ## iKNOW
 
 ## Conteúdo
+- [Instalação](#Instalação)
 - [Introdução](#Introdução)
 - [Arquitectura](#Arquitectura)
 - [Inicio rápido](#Inicio-rápido)
@@ -13,6 +14,25 @@
 - [Requisitos](#Requisitos)
 - [Licença](#Licença)
 - [Agradecimentos](#Agradecimentos)
+
+## Instalação
+INSTALAÇÃO iKNOW 2.0
+
+- python3.7, instalar em c:\python37 (download em https://www.python.org/ftp/python/3.7.3/python-3.7.3.exe)
+- newspaper, instalar:
+```
+cd python37
+cd scripts
+pip3 install newspaper3k
+```
+- editar o ficheiro osints_obter_noticia_1.php e alterar o caminho
+```
+$comando="C:/Python37/python.exe C:/caminho/htdocs/a-logins/osints_obter_noticia_12.py $Artigo";
+```
+- editar o caminho do ficheiro osints_obter_noticia_12.py (pode ser testado o artigo directamente e se escreveu):
+```
+with io.open("C:/xampp/htdocs/a-logins/artigo_utf8.txt"
+```
 
 ## Introdução
 
